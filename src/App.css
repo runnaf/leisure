@@ -1,38 +1,186 @@
-.App {
+body {
+  margin: 0;
+  color: #fff;
+  background-color: rgb(22, 37, 71);
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+}
+
+button, input, textarea {
+  font-family: 'Playfair Display', serif;
+  box-sizing: border-box;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(255, 167, 36, 1);
+  color:rgba(31, 54, 107, 1);
+  border-color: rgba(255, 167, 36, 1);
+}
+
+.leisure__title-main {
+  font-family: 'Rubik Gemstones', cursive;
+  font-size: 68px;
+  color: rgba(244, 157, 26, 1);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 30px 80px;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+.leisure__list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  padding: 0;
+  margin-bottom: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.leisure__list img {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+  border: 6px solid #ffffff;
+  margin-bottom: 30px;
+}
+
+.leisure__item {
+  background-color: rgba(31, 54, 107, 1);
+  padding: 30px 60px;
+  box-sizing: border-box;
+  max-width: 745px;
+}
+
+.leisure__title {
+  text-align: center;
+  min-height: 100px;
+}
+
+.leisure__button {
+  background-color: rgba(244, 157, 26, 1);
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 10px;
+  min-width: 300px;
+}
+
+.leisure__button-remove {
+  width: 60%;
+  background-color: #ffffff;
+  color: rgba(244, 157, 26, 1);
+  font-size: 24px;
+  padding: 8px;
+  text-align: center;
+  margin: 0 auto 40px;
+  display: block;
+}
+
+.btn {
+  font-size: 22px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: rgba(244, 157, 26, 1);
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: rgba(255, 185, 79);
+  background-color: transparent;
+}
+
+.slider__button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__button {
+  color: #fff;
+}
+
+.slider__title {
+  text-align: center;
+}
+
+.slider__image {
+  display: block;
+  border: 5px solid #ffffff;
+  margin-bottom: 30px;
+  width: 650px;
+  height: 900px;
+  object-fit: cover;
+}
+
+.reviews__title {
+  font-size: 24px;
+  color: rgba(244, 157, 26, 1);
+  margin-bottom: 40px;
+}
+
+.reviews__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.reviews__field {
+  background-color: rgba(31, 54, 107, 1);
+  border: 2px solid #ffffff;
+  font-size: 18px;
+  padding: 8px 8px;
+  width: 60%;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.reviews__desc-field {
+  margin-bottom: 15px;
+}
+
+.reviews__field::placeholder {
+  color: rgba(244, 157, 26, 1);
+}
+
+.reviews__button {
+  border: 2px solid #ffffff;
+  font-size: 18px;
+  padding: 8px 8px;
+  color:rgb(22, 37, 71);
+  background-color: rgba(244, 157, 26, 1);
+  width: 60%;
+  margin-top: 30px;
+}
+
+.reviews__list {
+  list-style-type: none;
+  align-self: flex-start;
+  margin-top: 0;
+}
+
+.review__item {
+  margin-bottom: 45px;
+}
+
+.review__title {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.review__description {
+  font-size: 18px;
 }

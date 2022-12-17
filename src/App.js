@@ -6,7 +6,7 @@ import { Reviews } from './GetReviews';
 
 function App() {
   const [leisures, setLeisures] = useState(data);
-  const [showMore, setShowMore] = useState(false)
+  const [showMore, setShowMore] = useState(false);
 
   const toshowText = (item) => {
     item.showMore = !item.showMore;
@@ -14,11 +14,15 @@ function App() {
   }
 
   const isDeletePicture = (id) => {
-
-    let newLeisuresList = leisures.filter(item => (
-      
+    let newLeisuresList = leisures.filter(item => (      
       item.id !== id));
     setLeisures(newLeisuresList)
+  }
+
+  const removeAll = () => {
+    if (leisures.length === 0) {
+      setLeisures(data)
+    } else { setLeisures([]) }
   }
 
   return (
@@ -41,14 +45,12 @@ function App() {
               })
             }
           </ul>
-          <button type='button' className='leisure__button-remove' onClick={()=>leisures.length = 0}>Удалить все события</button>      
+          <button type='button' className='leisure__button-remove' onClick={removeAll}>{leisures.length === 0 ? "Восстановить все события" : "Удалить все события"}</button>      
         </div>
         <GetSlider />        
       </section>
       <Reviews />
-    </>
-    
-    
+    </>   
   );
 }
 

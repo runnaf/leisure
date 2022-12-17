@@ -78,6 +78,7 @@ button:hover {
 
 .leisure__button-remove {
   width: 60%;
+  min-width: 805px;
   background-color: #ffffff;
   color: rgba(244, 157, 26, 1);
   font-size: 24px;

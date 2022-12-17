@@ -3,7 +3,6 @@ let reviewsArray = [];
 
 export function Reviews() {
   const [state, setState] = useState({name: "", review: "", reviews: []});
-  
 
   const isNameChange = (valueName) => {
     setState({name: valueName, review: state.review, reviews: state.reviews})
@@ -24,14 +23,14 @@ export function Reviews() {
     <section className="reviews container">
       <h2 className="reviews__title">Здесь Вы можете оставить Ваш отзыв</h2>
       <form className="reviews__form" onSubmit={(e)=> e.preventDefault()}>
-        <label className="reviews__desc-field" for="nameField">
+        <label className="reviews__desc-field" htmlFor="nameField">
           Введите Ваше имя:
         </label>
         <input className="reviews__field"  type="text" id="nameField" onChange={(e)=>{isNameChange(e.target.value)}} value= { state.name } />
-        <label className="reviews__desc-field" for="nameField">
+        <label className="reviews__desc-field" htmlFor="reviewField">
           Введите Ваш отзыв:
         </label>
-        <textarea className="reviews__field" onChange={(e)=>{introductionOfReview(e.target.value)}} value = { state.review } rows = "7" />
+        <textarea className="reviews__field" id="reviewField" onChange={(e)=>{introductionOfReview(e.target.value)}} value = { state.review } rows = "7" />
         <button className="reviews__button" type="submit" onClick={ () => SendReview() }>Отправить отзыв</button>
       </form>
       <h3>{state.reviews.length === 0 ? "" : "Отзывы:"}</h3>      
